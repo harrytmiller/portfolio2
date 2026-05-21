@@ -1,15 +1,16 @@
 import Link from "next/link";
 import PROJECTS from "../data/projects";
 import s from "../styles/Home.module.css";
- 
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const ARCHIVE_URL = "https://harrytmiller.github.io/portfolio/";
- 
+
 const CERTS = [
-  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-900.pdf" },
-  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-104.pdf" },
-  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: "/certificates/CLF-C02.pdf" },
+  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: `${BASE}/certificates/AZ-900.pdf` },
+  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: `${BASE}/certificates/AZ-104.pdf` },
+  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: `${BASE}/certificates/CLF-C02.pdf` },
 ];
- 
+
 const Y2_MODULES = [
   ["User Experience Design and Implementation", "70%"],
   ["Software Engineering Theory and Practice",  "78%"],
@@ -18,7 +19,7 @@ const Y2_MODULES = [
   ["Database Principles",                       "70%"],
   ["Business Information Systems Security",     "70%"],
 ];
- 
+
 const Y3_MODULES = [
   ["Artificial Intelligence",          "75%"],
   ["Advanced Networks",                "75%"],
@@ -26,12 +27,12 @@ const Y3_MODULES = [
   ["Usability Testing",                "64%"],
   ["Individual Project (Engineering)", "65%"],
 ];
- 
+
 export default function Home() {
   return (
     <div className={s.page}>
       <div className={s.wrap}>
- 
+
         {/* ── HERO ── */}
         <div className={s.hero}>
           <h1 className={s.name}>Harry<br />Miller</h1>
@@ -49,13 +50,13 @@ export default function Home() {
                 <a href="https://github.com/harrytmiller" target="_blank" rel="noopener noreferrer" className={s.detailLink}>harrytmiller</a>
               </div>
             </div>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
+            <a href={`${BASE}/cv.pdf`} target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
               View CV
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </a>
           </div>
         </div>
- 
+
         {/* ── ABOUT ── */}
         <div>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>About</span><div className={s.sectionLine} /></div>
@@ -67,11 +68,11 @@ export default function Home() {
               <p className={s.aboutNote}>Please note: I have visible tattoos including on my face, neck, and hands, which are part of my personal expression and authentic identity.</p>
             </div>
             <div className={s.photoWrap}>
-              <img src="/images/83.jpg" alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
+              <img src={`${BASE}/images/83.jpg`} alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
             </div>
           </div>
         </div>
- 
+
         {/* ── ACADEMICS ── */}
         <div>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Academics</span><div className={s.sectionLine} /></div>
@@ -104,12 +105,12 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <a href="/transcript.pdf" target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
+          <a href={`${BASE}/transcript.pdf`} target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
             View Transcript
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
         </div>
- 
+
         {/* ── CERTIFICATIONS ── */}
         <div>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Certifications</span><div className={s.sectionLine} /></div>
@@ -128,7 +129,7 @@ export default function Home() {
             ))}
           </div>
         </div>
- 
+
         {/* ── PORTFOLIO OVERVIEW ── */}
         <div>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Portfolio</span><div className={s.sectionLine} /></div>
@@ -175,7 +176,7 @@ export default function Home() {
           </div>
           <p style={{fontSize:"0.75rem",color:"var(--muted)",fontWeight:300,lineHeight:1.7,marginTop:"1.5rem",letterSpacing:"0.02em"}}>I built a new portfolio as my recent work was better than my portfolio. Switching from Flutter to Next.js helped me to grow as a developer, and with a Masters and a pipeline of projects ahead, now felt like the right time for a cleaner foundation. I still believe the projects in my archive hold value and demonstrate my journey.</p>
         </div>
- 
+
         {/* ── SELECTED WORK ── */}
         <div className={s.work}>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Selected Work</span><div className={s.sectionLine} /></div>
@@ -197,9 +198,9 @@ export default function Home() {
               </Link>
             ))}
           </div>
- 
+
         </div>
- 
+
       </div>
     </div>
   );
