@@ -1,0 +1,10 @@
+.root { min-height: 100vh; display: flex; flex-direction: column; }
+.root main { flex: 1; }
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.72rem; color: var(--muted);
+  transition: border-color 0.3s;
+}

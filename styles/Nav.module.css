@@ -1,0 +1,84 @@
+.nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+  display: flex; align-items: center;
+  padding: 0 2.5rem;
+  justify-content: space-between;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 500; font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  color: var(--text); white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.links {
+  display: flex; align-items: center;
+  gap: 0.25rem; list-style: none;
+}
+
+.link {
+  padding: 0.4rem 0.75rem; border-radius: 6px;
+  font-size: 0.82rem; font-weight: 400;
+  color: var(--muted);
+  transition: color 0.15s, background 0.15s;
+}
+.link:hover { color: var(--text); background: var(--hover); }
+.active { color: var(--text) !important; }
+
+.right { display: flex; align-items: center; gap: 0.5rem; }
+
+.iconBtn {
+  width: 34px; height: 34px; border-radius: 8px;
+  border: 1px solid var(--border);
+  background: none;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+  transition: background 0.15s, border-color 0.15s;
+}
+.iconBtn:hover { background: var(--hover); }
+
+.hamburger { display: none; }
+
+@media (max-width: 680px) {
+  .links { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* Dropdown */
+.dropdown {
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 199;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1rem 1rem;
+  display: flex; flex-direction: column;
+  transition: background 0.3s;
+  animation: slideDown 0.18s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobileItem {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; text-align: left;
+  padding: 0.9rem 0.5rem;
+  border: none; border-bottom: 1px solid var(--border);
+  background: none;
+  font-family: var(--font-body); font-size: 0.9rem; color: var(--text);
+  transition: color 0.15s;
+}
+.mobileItem:last-child { border-bottom: none; }
+.mobileItem:hover { color: var(--muted); }
+
+.mobileArrow { font-size: 0.75rem; color: var(--muted); }
+
+.extLink { display: inline-flex; align-items: center; gap: 0.2rem; }
+.extArrow { font-size: 0.72rem; }
