@@ -1,1 +1,8 @@
-{"/_app":"pages/_app.js","/_error":"pages/_error.js","/business":"pages/business.html","/masters":"pages/masters.html","/":"pages/index.html","/projects/[slug]":"pages/projects/[slug].js","/_document":"pages/_document.js","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/business": "pages/business.js",
+  "/projects/[slug]": "pages/projects/[slug].js",
+  "/": "pages/index.js"
+}

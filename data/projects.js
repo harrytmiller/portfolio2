@@ -1,9 +1,19 @@
+// Base path: empty locally, "/portfolio2" when deployed (set by GitHub Actions)
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// Helper: builds image paths from a numeric range (zero-padded to 3 digits)
+const range = (start, end) =>
+  Array.from({ length: end - start + 1 }, (_, i) =>
+    `${BASE}/images/${String(start + i).padStart(3, "0")}.png`
+  );
+
 const PROJECTS = [
   {
     id: "template", slug: "template",
     name: "Template", category: "Business Project", year: "2026",
     desc: "A design template targeted towards service based businesses.",
-    image: "/portfolio2/images/101.png",
+    image: `${BASE}/images/101.png`,
+    images: range(101, 115),
     link: "https://template-pdi19gjek-s-projects14.vercel.app/",
     overview: "Multi-page website template built for service-based businesses.",
     software: "TypeScript, Next.js (App Router), React, Resend (transactional email), Vercel (serverless deployment, CI/CD), GitHub (version control), HTML5, CSS3",
@@ -14,7 +24,9 @@ const PROJECTS = [
     id: "template-store", slug: "template-store",
     name: "Template Store", category: "Business Project", year: "2026",
     desc: "A fully functional e-commerce platform set up in test mode.",
-    image: "/portfolio2/images/001.png",
+    image: `${BASE}/images/001.png`,
+    images: range(1, 35
+    ),
     link: "https://template-store-roan.vercel.app/",
     overview: "E-commerce platform: stock & orders database, admin control panel, order processing (cart → payment → fulfilment/refund), MFA, role-based auth, webhook-driven emails, race-safe atomic transactions, deployed serverlessly on Vercel with Neon Postgres, set up in test mode so on transaction users aren't charged and items aren't actually sold (account number: 4242 4242 4242 4242, cvs & date: any)",
     software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, PostgreSQL, SQLite, Neon (serverless Postgres), Prisma ORM, SQL, Stripe (Payment Intents, webhooks, refunds), Clerk (custom sign-in, MFA, password reset, role-based admin), Resend (transactional email), Vercel, GitHub, HTML5, CSS3 Vercel (serverless deployment, CI/CD), Neon (serverless Postgres, connection pooling), GitHub (version control, automatic deploys on push), Stripe (Payment Intents, webhooks, refunds), Clerk (auth, MFA, role-based admin), Resend (transactional email), Prisma ORM (migrations, schema management), HTTPS/TLS, environment-based secret management",
