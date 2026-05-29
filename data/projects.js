@@ -38,7 +38,7 @@ const PROJECTS = [
     name: "Template Bookings", category: "Business Project", year: "2026",
     desc: "A full appointment booking platform with payment processing and admin panels.",
     image: `${BASE}/images/201.png`,
-    images: range(201, 215),
+    images: range(201, 231),
     link: "https://bookings-eta-pied.vercel.app/",
     overview: "Appointment booking platform: live availability calendar, Stripe deposit checkout, email verification, admin panel, one-click default schedule generator, add or remove availability windows, overlapping windows merged automatically, manual admin bookings with no deposit, refund or cancel, automated day-before reminders, deployed serverlessly on Vercel with Neon Postgres, set up in Stripe test mode so no real charges are taken (card: 4242 4242 4242 4242, expiry & CVC: any)",
     software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, PostgreSQL, Neon (serverless Postgres, connection pooling), Stripe (Checkout, webhooks, refunds), JWT auth with bcryptjs password hashing, Resend (transactional email), Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), GitHub Actions (free hourly cron for reminder email), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
