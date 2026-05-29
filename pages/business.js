@@ -31,11 +31,11 @@ export default function Business() {
                   ))}
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", alignSelf: "stretch" }}>
                 {p.image && (
                   <div
                     style={{
-                      width: "240px",
+                      height: "96%",
                       aspectRatio: "1919 / 910",
                       borderRadius: "4px",
                       overflow: "hidden",
