@@ -179,7 +179,11 @@ function Gallery({ images, name }) {
 export default function ProjectPage({ project }) {
   if (!project) return null;
 
-  const other = PROJECTS.find((p) => p.id !== project.id);
+  // Cycle to the next project in the list, wrapping back to the first
+  const currentIdx = PROJECTS.findIndex((p) => p.id === project.id);
+  const other = PROJECTS.length > 1
+    ? PROJECTS[(currentIdx + 1) % PROJECTS.length]
+    : null;
   const galleryImages =
     project.images && project.images.length > 0
       ? project.images
