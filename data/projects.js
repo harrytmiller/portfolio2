@@ -9,6 +9,18 @@ const range = (start, end) =>
 
 const PROJECTS = [
   {
+    id: "kiwi-carpentry", slug: "kiwi-carpentry",
+    name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
+    desc: "A live business website for a carpentry and construction company.",
+    image: `${BASE}/images/301.png`,
+    images: range(301, 315),
+    link: "https://kiwi-h55oz7l8i-s-projects14.vercel.app/",
+    overview: "Multi-page business website for a carpentry and construction company: services browsable by category, individual service pages, project gallery with lightbox, company and legal pages (privacy, terms), and a contact form that sends enquiries by email through Resend with client-side image compression so customers can attach project photos, deployed serverlessly on Vercel.",
+    software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, Resend (transactional email), browser-image-compression (client-side image resizing), Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+    outcome: "A ready-to-trade website for a real carpentry business. Visitors can browse twelve services, view individual service pages and a project gallery, and read full legal pages. The contact form lets customers send an enquiry with their details, a preferred consultation date, and project photos, which are automatically resized in the browser before sending to stay within serverless payload limits, then delivered by email through Resend. All company details, services and contact information are structured to be updated easily. Built around real company information including registered company details and insurance, and deployed live on Vercel.",
+    tags: ["Design", "Development", "Deployment"],
+  },
+  {
     id: "template", slug: "template",
     name: "Template", category: "Business Project", year: "2026",
     desc: "A design template targeted towards service based businesses.",
