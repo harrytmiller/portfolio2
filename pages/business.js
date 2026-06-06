@@ -25,18 +25,16 @@ export default function Business() {
                 <div className={s.tileNum}>0{i + 1}</div>
                 <div className={s.tileName}>{p.name}</div>
                 <div className={s.tileMeta}>{p.year}</div>
-                {p.desc && (
-                  <p style={{
-                    fontSize: "0.85rem",
-                    color: "var(--muted)",
-                    fontWeight: 300,
-                    lineHeight: 1.6,
-                    marginTop: "0.75rem",
-                    maxWidth: "560px",
-                  }}>
-                    {p.desc}
-                  </p>
-                )}
+                <p style={{
+                  fontSize: "0.8rem",
+                  color: "var(--muted)",
+                  fontWeight: 300,
+                  lineHeight: 1.65,
+                  marginTop: "0.6rem",
+                  maxWidth: "560px",
+                }}>
+                  {p.desc}
+                </p>
                 <div className={s.tileTags}>
                   {p.tags.map((t) => (
                     <span key={t} className={s.tileTag}>{t}</span>
