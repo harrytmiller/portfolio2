@@ -229,7 +229,7 @@ export default function ProjectPage({ project }) {
         </div>
 
         {galleryImages.length > 0 ? (
-          <Gallery images={galleryImages} name={project.name} />
+          <Gallery key={project.id} images={galleryImages} name={project.name} />
         ) : (
           <div className={s.projImg}>Image Placeholder</div>
         )}
