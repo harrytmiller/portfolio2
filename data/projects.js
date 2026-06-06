@@ -14,7 +14,7 @@ const PROJECTS = [
     desc: "A design template targeted towards service based businesses.",
     image: `${BASE}/images/101.png`,
     images: range(101, 115),
-    link: "https://template-iota-topaz.vercel.app/",
+    link: "https://template-5laf04o1g-s-projects14.vercel.app/",
     overview: "Multi-page website template built for service-based businesses.",
     software: "TypeScript, Next.js (App Router), React, Resend (transactional email), Vercel (serverless deployment, CI/CD), GitHub (version control), HTML5, CSS3",
     outcome: "A ready-to-deploy business website covering the  customer journey from browsing to enquiry. Visitors can browse services filtered by category, and submit a contact form that sends an email through Resend. All content (service titles, tags, gallery items, contact details) is structured to be swapped out with minimal effort, making it a practical starting point for any service based business.",
