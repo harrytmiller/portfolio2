@@ -48,7 +48,7 @@ const PROJECTS = [
 {
     id: "template-bookings", slug: "template-bookings",
     name: "Template Bookings", category: "Business Project", year: "2026",
-    desc: "A full appointment booking platform with payment processing and admin panels.",
+    desc: "A full appointment booking platform with payment processing and admin panels set up in test mode.",
     image: `${BASE}/images/201.png`,
     images: range(201, 229),
     link: "https://bookings-eta-pied.vercel.app/",
