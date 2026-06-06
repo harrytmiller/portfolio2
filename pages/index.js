@@ -5,9 +5,9 @@ import s from "../styles/Home.module.css";
 const ARCHIVE_URL = "https://harrytmiller.github.io/portfolio/";
 
 const CERTS = [
-  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-900.pdf" },
-  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-104.pdf" },
-  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: "/certificates/CLF-C02.pdf" },
+  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: "/portfolio2/certificates/AZ-900.pdf" },
+  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: "/portfolio2/certificates/AZ-104.pdf" },
+  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: "/portfolio2/certificates/CLF-C02.pdf" },
 ];
 
 const Y2_MODULES = [
@@ -49,7 +49,7 @@ export default function Home() {
                 <a href="https://github.com/harrytmiller" target="_blank" rel="noopener noreferrer" className={s.detailLink}>harrytmiller</a>
               </div>
             </div>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
+            <a href="/portfolio2/cv.pdf" target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
               View CV
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </a>
@@ -104,7 +104,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <a href="/transcript.pdf" target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
+          <a href="/portfolio2/transcript.pdf" target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
             View Transcript
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
