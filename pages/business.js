@@ -25,6 +25,18 @@ export default function Business() {
                 <div className={s.tileNum}>0{i + 1}</div>
                 <div className={s.tileName}>{p.name}</div>
                 <div className={s.tileMeta}>{p.year}</div>
+                {p.desc && (
+                  <p style={{
+                    fontSize: "0.85rem",
+                    color: "var(--muted)",
+                    fontWeight: 300,
+                    lineHeight: 1.6,
+                    marginTop: "0.75rem",
+                    maxWidth: "560px",
+                  }}>
+                    {p.desc}
+                  </p>
+                )}
                 <div className={s.tileTags}>
                   {p.tags.map((t) => (
                     <span key={t} className={s.tileTag}>{t}</span>
@@ -35,7 +47,7 @@ export default function Business() {
                 {p.image && (
                   <div
                     style={{
-                      height: "115px",
+                      height: "clamp(56px, 14vw, 115px)",
                       aspectRatio: "1919 / 910",
                       borderRadius: "4px",
                       overflow: "hidden",
