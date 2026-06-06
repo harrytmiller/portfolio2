@@ -67,7 +67,7 @@ export default function Home() {
               <p className={s.aboutNote}>Please note: I have visible tattoos including on my face, neck, and hands, which are part of my personal expression and authentic identity.</p>
             </div>
             <div className={s.photoWrap}>
-              <img src="/images/83.jpg" alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
+              <img src="/portfolio2/images/83.jpg" alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
             </div>
           </div>
         </div>
