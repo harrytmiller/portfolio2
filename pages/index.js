@@ -2,13 +2,12 @@ import Link from "next/link";
 import PROJECTS from "../data/projects";
 import s from "../styles/Home.module.css";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const ARCHIVE_URL = "https://harrytmiller.github.io/portfolio/";
 
 const CERTS = [
-  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: `${BASE}/certificates/AZ-900.pdf` },
-  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: `${BASE}/certificates/AZ-104.pdf` },
-  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: `${BASE}/certificates/CLF-C02.pdf` },
+  { name: "Azure Fundamentals", code: "AZ-900", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-900.pdf" },
+  { name: "Azure Administrator", code: "AZ-104", issuer: "Microsoft", year: "2025", file: "/certificates/AZ-104.pdf" },
+  { name: "AWS Cloud Practitioner", code: "CLF-C02", issuer: "Amazon Web Services", year: "2025", file: "/certificates/CLF-C02.pdf" },
 ];
 
 const Y2_MODULES = [
@@ -50,7 +49,7 @@ export default function Home() {
                 <a href="https://github.com/harrytmiller" target="_blank" rel="noopener noreferrer" className={s.detailLink}>harrytmiller</a>
               </div>
             </div>
-            <a href={`${BASE}/cv.pdf`} target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
               View CV
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </a>
@@ -63,12 +62,12 @@ export default function Home() {
           <div className={s.aboutGrid}>
             <div className={s.aboutText}>
               <p className={s.aboutP}>My name is Harry Tiger Miller, I am 22 years old, and I recently graduated with First Class Honours in Computing from the University of Portsmouth. I&rsquo;m passionate about computing and expressing creativity through developing projects. I like turning ideas into reality by combining technical skills with creative thinking. I also enjoy complex problem solving as it allows for critical thinking, as well as the satisfaction of finding a solution. I believe in continuous learning and personal development. I like to challenge myself both academically and personally to reach my full potential.</p>
-              <p className={s.aboutP}>My degree is broad and covers different topics such as: usability, user interface design, security, software engineering, 3D design and animation, artificial intelligence, networks and databases (some of which are covered in this portfolio). I can use programming languages: Python, Java, JavaScript, TypeScript, Dart, HTML, CSS, and SQL. I have made multiple applications, the most relevant of which are accessible through this portfolio.</p>
+              <p className={s.aboutP}>My degree is broad and covers different topics such as: usability, user interface design, security, software engineering, 3D design and animation, artificial intelligence, networks and databases (some of which are covered in this portfolio). I can use programming languages: Python, Java, JavaScript, TypeScript, Dart, HTML, CSS, and SQL. I have made multiple applications, the most relevant of which are accessible through this portfolio. It has been a goal of mine to achieve as highly as I am capable of at university. This includes both learning and understanding academic knowledge to score highly in exams, and applying what I know to produce high quality courseworks.</p>
               <p className={s.aboutP}>My academic success reflects my commitment to excellence. I&rsquo;m excited to apply both my technical skills and creative perspective to meaningful projects that challenge me to grow.</p>
               <p className={s.aboutNote}>Please note: I have visible tattoos including on my face, neck, and hands, which are part of my personal expression and authentic identity.</p>
             </div>
             <div className={s.photoWrap}>
-              <img src={`${BASE}/images/83.jpg`} alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
+              <img src="/images/83.jpg" alt="Harry Miller" style={{ width:"100%", height:"auto", display:"block", borderRadius:"4px" }} />
             </div>
           </div>
         </div>
@@ -105,7 +104,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <a href={`${BASE}/Transcript.pdf`} target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
+          <a href="/transcript.pdf" target="_blank" rel="noopener noreferrer" className={`${s.cvBtn} ${s.cvBtnOutline}`}>
             View Transcript
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
@@ -162,8 +161,11 @@ export default function Home() {
               </Link>
               <div className={s.overviewSub}>Professional work</div>
               <div className={s.overviewYear}>Projects</div>
-              <Link href="/projects/template" className={s.overviewItemLink}>Template <span className={s.overviewItemArrow}>→</span></Link>
-              <Link href="/projects/template-store" className={s.overviewItemLink}>Template Store <span className={s.overviewItemArrow}>→</span></Link>
+              {PROJECTS.map((p) => (
+                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
+                  {p.name} <span className={s.overviewItemArrow}>→</span>
+                </Link>
+              ))}
             </div>
             <div className={s.overviewCard}>
               <Link href="/masters" className={s.overviewCardHead}>
