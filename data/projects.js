@@ -13,7 +13,7 @@ const PROJECTS = [
     name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
     desc: "A live business website for a carpentry and construction company.",
     image: `${BASE}/images/301.png`,
-    images: range(301, 326),
+    images: range(298, 326),
     link: "https://www.qualitykiwicarpentry.com/",
     overview: "Multi-page business website for a carpentry and construction company: services browsable by category, individual service pages, project gallery, company and legal pages (privacy, terms), and a contact form that sends enquiries by email through Resend with client-side image compression so customers can attach project photos.",
     software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, Resend (transactional email), client-side image compression, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
