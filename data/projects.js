@@ -12,14 +12,29 @@ const PROJECTS = [
     id: "kiwi-carpentry", slug: "kiwi-carpentry",
     name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
     desc: "A live business website for a carpentry and construction company.",
-    image: `${BASE}/images/301.png`,
-    images: range(298, 326),
+    image: `${BASE}/images/298.png`,
+    images: range(298, 327),
     link: "https://www.qualitykiwicarpentry.com/",
     overview: "Multi-page business website for a carpentry and construction company: services browsable by category, individual service pages, project gallery, company and legal pages (privacy, terms), and a contact form that sends enquiries by email through Resend with client-side image compression so customers can attach project photos.",
     software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, Resend (transactional email), client-side image compression, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
     outcome: "A ready-to-trade website for a real carpentry business. Visitors can browse twelve services, view individual service pages and a project gallery, and read full legal pages. The contact form lets customers send an enquiry with their details, a preferred consultation date, and project photos, which are automatically resized in the browser before sending to stay within serverless payload limits, then delivered by email through Resend. All company details, services and contact information are structured to be updated easily. Built around real company information including registered company details and insurance, and deployed live on Vercel.",
     tags: ["Design", "Development", "Deployment"],
   },
+
+    {
+    id: "sct", slug: "Stroud Complementary Therapies",
+    name: "Stroud Complementary Therapies", category: "Business Project", year: "2026",
+    desc: "A live appointment booking website for a complementary therapy practice, with deposit payments and an admin panel the owner uses to manage bookings, availability and site content.",
+    image: `${BASE}/images/298.png`,
+    images: range(298, 327),
+    link: "",
+    overview: "Live appointment booking website for a real massage and reflexology practice: customers choose one or more treatments to be booked back-to-back as a single appointment, pick a slot from a monthly calendar showing live availability, and pay a deposit through Stripe to confirm. Guest bookings are verified by a one-time email code; registered clients save their details for faster rebooking. Double-booking is made impossible by a database-level exclusion constraint, and an adults-only age check is enforced from date of birth. The admin panel lets the owner generate a monthly schedule in one click, add or remove availability windows (overlapping windows merge automatically), make manual bookings, and reschedule, cancel or refund any appointment; each action sending the matching email. The owner also edits the site's own content from the panel: treatments and prices, the photo gallery, contact details and treatment information. Built with GDPR-compliant data handling, including a full privacy notice, ICO registration, consent capture and account deletion. Deployed serverlessly on Vercel with a Neon Postgres database.",
+    software: "TypeScript, Next.js 16 (App Router, Server Components, Turbopack), React 19, Node.js, PostgreSQL, Neon (serverless Postgres, connection pooling), Stripe (Checkout, webhooks, refunds), JWT auth with bcryptjs password hashing, Resend (transactional email, domain-verified sending), Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), GitHub Actions (scheduled cron for reminder emails), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+    outcome: "A complete booking site for a real complementary therapy practice, from browsing through to refund. Customers choose one or more treatments to run back-to-back as a single appointment, pick a slot from a monthly calendar showing live availability, and pay a deposit through Stripe with card or digital wallets (Apple Pay and Google Pay). Guests verify their email with a one-time code while registered clients have their details pre-filled and go straight to payment. Every slot is protected against double-booking at the database level, so two people can never hold the same time even if they pay at the same moment. Emails all fire automatically, each showing the correct deposit-paid and balance-due amounts. The admin panel runs the whole business: generate a month's schedule in one click, add or remove availability windows (overlapping ones merge automatically), book clients in manually with no deposit, and reschedule, cancel or refund any booking with the matching email sent automatically. The owner can also edit the site's own content from the panel, including treatments and prices, the photo gallery and contact details, without touching code. Built for a real practice with GDPR-compliant data handling, and deployed live on Vercel with a serverless Neon Postgres database.",
+    tags: ["Design", "Development", "Deployment"],
+  },
+
+
   {
     id: "template", slug: "template",
     name: "Template", category: "Business Project", year: "2026",
