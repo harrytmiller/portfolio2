@@ -252,7 +252,7 @@ export default function ProjectPage({ project }) {
             <div className={s.projSectionBody}><p>{project.outcome}</p></div>
           </div>
         )}
-
+ 
         {other && (
           <Link href={`/projects/${other.slug}`} className={s.projNext}>
             <div>
