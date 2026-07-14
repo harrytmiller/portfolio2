@@ -8,18 +8,7 @@ const range = (start, end) =>
   );
 
 const PROJECTS = [
-{
-  id: "kiwi-carpentry", slug: "kiwi-carpentry",
-  name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
-  desc: "A live business website for a carpentry and construction company.",
-  image: `${BASE}/images/298.png`,
-  images: range(298, 327),
-  link: "https://www.qualitykiwicarpentry.com/",
-  overview: "Multi-page business website for a carpentry and construction company: twelve services each with its own detail page, a project gallery, company and legal pages (privacy, terms), and a contact form that sends enquiries by email through Resend with client-side image compression so customers can attach project photos.",
-  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, Resend (transactional email), client-side image compression, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
-  outcome: "A ready-to-trade website for a real carpentry business. Visitors can browse twelve services, view individual service pages and a project gallery, and read full legal pages. The contact form lets customers send an enquiry with their details, a preferred consultation date, and project photos, which are automatically resized in the browser before sending to stay within serverless payload limits, then delivered by email through Resend. All company details, services and contact information are structured to be updated easily. Built around real company information including registered company details and insurance, and deployed live on Vercel.",
-  tags: ["Design", "Development", "Deployment"],
-},
+
 {
   id: "sct", slug: "Stroud Complementary Therapies",
   name: "Stroud Complementary Therapies", category: "Business Project", year: "2026",
@@ -36,16 +25,28 @@ const PROJECTS = [
 {
   id: "red", slug: "red",
   name: "Red", category: "Business Project", year: "2026",
-  desc: "A live artist portfolio built to grow into a full e-commerce store the moment its owner is ready, with every stage of that transition controlled from one admin panel.",
+  desc: "A live portfolio and shop for an artist selling original paintings and prints, with vast admin options so the site can grow with the buisness.",
   image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(600, 640)
   images: [],                                 // TODO: range(START, END)
   link: "https://redartworks.co.uk/",
-  overview: "Website built for an artist who's about to start selling their work, designed so the site itself doesn't need rebuilding as the business grows. It launches as a pure portfolio — gallery, about page, contact — with zero purchasing surface live. When its owner is ready to start trading, a single admin toggle switches the entire site, sitewide, into a fully transactional shop: stock, checkout, orders, tracking, all of it. Every field that conversion needs — trader identity, business address, VAT status — is already built into the admin panel from day one, sitting ready to fill in whenever, rather than needing new development work later. The site's legal pages follow the same philosophy but deliberately don't flip automatically with the shop: Terms & Privacy show a simplified, portfolio-appropriate version by default, and switching to the full trading version (covering orders, payment, and cancellation rights) is its own separate, manual toggle — because going live with real trading is a considered decision, not something that should happen as a side-effect of an unrelated setting. Past that core shop/portfolio switch, individual features — account registration, the contact form, the newsletter signup, product-category browsing — can each be turned on independently through the same panel, so the site only ever exposes what the business is actually ready for at any given stage, right up to full scale.",
-  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres, HTTP driver), Stripe (live KYC-verified account, Payment Intents, webhooks), custom JWT auth (jose) with bcryptjs password hashing and OTP email verification, Brevo (transactional email, verified sender), Cloudinary (image hosting/CDN), postcodes.io (free UK postcode/address validation against live ONS data), Netlify (serverless deployment, CI/CD, managed TLS), Cloudflare (domain registration, DNS), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
-  outcome: "A site that runs as a portfolio today and as a full store the day its owner decides, with no development work in between. In shop mode: a full product catalogue with per-size stock; checkout that reserves stock the instant it starts (not at payment) using an atomic, race-condition-safe database transaction, so two people can never both buy the last unit of a one-of-a-kind piece; guest checkout that verifies the customer's email with a one-time code before payment; UK postcode and town cross-checked against live ONS postcode data to catch typo'd addresses before they ship; and order confirmation, shipped, and cancelled emails firing automatically. Every genuine data-collection point — the contact form, newsletter sign-up, registration, and checkout — requires its own explicit, GDPR-appropriate consent checkbox, enforced server-side rather than trusted to the browser, and structured so no processing (not even sending a verification code) can happen before consent is given. Data retention is handled automatically rather than left as manual admin upkeep: abandoned, never-verified registrations delete themselves after 48 hours; unsubscribing from the newsletter is one click via a signed link, no login needed; and old order records past the legally-required 6-year retention window can be anonymised (name, address and email redacted, the order itself kept for accounting) with one admin-triggered action. Accounts include self-serve password reset and account deletion, and login is deliberately never gated by any admin toggle, so the site's owner can never lock themselves out of their own account. The admin panel controls all of it — shop on/off, registration on/off, contact form on/off, newsletter sign-up on/off, product-category browsing on/off, trading vs. portfolio legal pages, and full trader/business/VAT identity — with every change applying sitewide immediately, no redeploy required.",
+  overview: "Live portfolio and shop built to grow with the buisness, for an artist selling original paintings and prints. The site launches as a portfolio with no purchasing live, and an admin toggle switches the whole site into a full e-commerce shop or a shop redirect when the owner's ready to trade. For portfolio and shop redirect modes legal pages update automatically to refelect the state of the site. For full ecommerse legal pages must be updated manually with a switch. Other full ecommerse switches include: Registration, the contact form, the newsletter signup and product category header buttons.",
+  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres), Stripe (live account, Payment Intents, webhooks), custom JWT auth with bcryptjs and OTP email verification, Brevo (transactional email), Cloudinary (image hosting), postcodes.io (UK postcode validation), Netlify (serverless deployment, CI/CD), Cloudflare (domain, DNS), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
+  outcome: "Customers browse and buy once the shop's switched on. Checkout reserves stock the moment it starts, not after payment, so two people can never buy the last unit of a one-of-a-kind piece at the same time. Guests verify their email with a one-time code before paying, and the postcode is checked against live UK postcode data before an order goes through. Every form that collects data (contact, newsletter, registration, checkout) requires its own consent checkbox, checked on the server, not just the browser. Abandoned sign-ups delete themselves after 48 hours, unsubscribing from the newsletter is one click, old orders past the 6-year retention period can be anonymised from the admin panel. The owner runs all of it, shop on/off, legal pages, registration, contact form, newsletter, from one panel with no code changes needed.",
   tags: ["Design", "Development", "Deployment"],
 },
- 
+
+{
+  id: "kiwi-carpentry", slug: "kiwi-carpentry",
+  name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
+  desc: "A live business website for a carpentry and construction company.",
+  image: `${BASE}/images/298.png`,
+  images: range(298, 327),
+  link: "https://www.qualitykiwicarpentry.com/",
+  overview: "Multi-page business website for a carpentry and construction company: twelve services each with its own detail page, a project gallery, company and legal pages (privacy, terms), and a contact form that sends enquiries by email through Resend with client-side image compression so customers can attach project photos.",
+  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, Resend (transactional email), client-side image compression, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management.",
+  outcome: "A ready-to-trade website for a real carpentry business. Visitors can browse twelve services, view individual service pages and a project gallery, and read full legal pages. The contact form lets customers send an enquiry with their details, a preferred consultation date, and project photos, which are automatically resized in the browser before sending to stay within serverless payload limits, then delivered by email through Resend. All company details, services and contact information are structured to be updated easily. Built around real company information including registered company details and insurance, and deployed live on Vercel.",
+  tags: ["Design", "Development", "Deployment"],
+},
   {
     id: "template", slug: "template",
     name: "Template", category: "Business Project", year: "2026",
