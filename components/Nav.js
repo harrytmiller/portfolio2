@@ -2,16 +2,30 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "../context/ThemeContext";
+import PROJECTS from "../data/projects";
 import s from "../styles/Nav.module.css";
 
 const ARCHIVE_URL = "https://harrytmiller.github.io/portfolio/";
 
 export default function Nav() {
   const { dark, toggle } = useTheme();
-  const { pathname } = useRouter();
+  const router = useRouter();
+  const { pathname, query } = router;
   const [open, setOpen] = useState(false);
 
-  const isBusiness = pathname.startsWith("/business") || pathname.startsWith("/projects");
+  // /projects/[slug] is shared by both Business and Personal projects, so
+  // look up which category the current project actually belongs to rather
+  // than just matching the path prefix.
+  const currentProject = pathname.startsWith("/projects")
+    ? PROJECTS.find((p) => p.slug === query.slug)
+    : null;
+
+  const isBusiness =
+    pathname.startsWith("/business") ||
+    (currentProject && currentProject.category === "Business Project");
+  const isPersonal =
+    pathname === "/personal" ||
+    (currentProject && currentProject.category === "Personal Project");
 
   return (
     <>
@@ -22,6 +36,11 @@ export default function Nav() {
           <li>
             <Link href="/business" className={`${s.link} ${isBusiness ? s.active : ""}`}>
               Business
+            </Link>
+          </li>
+          <li>
+            <Link href="/personal" className={`${s.link} ${isPersonal ? s.active : ""}`}>
+              Personal
             </Link>
           </li>
           <li>
@@ -75,6 +94,9 @@ export default function Nav() {
         <div className={s.dropdown}>
           <Link href="/business" className={s.mobileItem} onClick={() => setOpen(false)}>
             Business <span className={s.mobileArrow}>→</span>
+          </Link>
+          <Link href="/personal" className={s.mobileItem} onClick={() => setOpen(false)}>
+            Personal <span className={s.mobileArrow}>→</span>
           </Link>
           <Link href="/masters" className={s.mobileItem} onClick={() => setOpen(false)}>
             Masters <span className={s.mobileArrow}>→</span>

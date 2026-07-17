@@ -2,13 +2,15 @@ import Link from "next/link";
 import PROJECTS from "../data/projects";
 import s from "../styles/Catalogue.module.css";
 
+const BUSINESS_PROJECTS = PROJECTS.filter((p) => p.category === "Business Project");
+
 export default function Business() {
   return (
     <div className={s.page}>
       <div className={s.wrap}>
         <div className={s.catHeader}>
           <div>
-            <div className={s.catalogueCount}>{PROJECTS.length} Projects</div>
+            <div className={s.catalogueCount}>{BUSINESS_PROJECTS.length} Projects</div>
             <h1 className={s.catTitle}>Business<br />Projects</h1>
           </div>
           <p className={s.catSub}>
@@ -19,7 +21,7 @@ export default function Business() {
         </div>
 
         <div className={s.tileList}>
-          {PROJECTS.map((p, i) => (
+          {BUSINESS_PROJECTS.map((p, i) => (
             <Link key={p.id} href={`/projects/${p.slug}`} className={s.tile}>
               <div>
                 <div className={s.tileNum}>0{i + 1}</div>

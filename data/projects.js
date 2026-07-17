@@ -24,7 +24,7 @@ const PROJECTS = [
 
 
 {
-  id: "red", slug: "red", 
+  id: "red", slug: "red",
   name: "Red", category: "Business Project", year: "2026",
   desc: "A live portfolio and shop for an artist selling original paintings and prints, with vast admin options so the site can grow with the business.",  image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(600, 640)
   images: [],                                 // TODO: range(START, END)

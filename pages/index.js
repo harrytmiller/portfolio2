@@ -161,7 +161,19 @@ export default function Home() {
               </Link>
               <div className={s.overviewSub}>Professional work</div>
               <div className={s.overviewYear}>Projects</div>
-              {PROJECTS.map((p) => (
+              {PROJECTS.filter((p) => p.category === "Business Project").map((p) => (
+                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
+                  {p.name} <span className={s.overviewItemArrow}>→</span>
+                </Link>
+              ))}
+            </div>
+            <div className={s.overviewCard}>
+              <Link href="/personal" className={s.overviewCardHead}>
+                Personal <span className={s.overviewArrow}>→</span>
+              </Link>
+              <div className={s.overviewSub}>Outside of client work</div>
+              <div className={s.overviewYear}>Projects</div>
+              {PROJECTS.filter((p) => p.category === "Personal Project").map((p) => (
                 <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
                   {p.name} <span className={s.overviewItemArrow}>→</span>
                 </Link>
