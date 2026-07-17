@@ -54,24 +54,13 @@ const PROJECTS = [
   desc: "A fully editable portfolio platform with a hidden admin panel.",
   image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(700, 720)
   images: [],                                 // TODO: range(START, END)
-  link: "",
+  link: "https://portfolio542.vercel.app",
   overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel.",
   software: "TypeScript, Next.js 14 (Pages Router), React, Node.js, PostgreSQL, Neon (serverless Postgres), Cloudinary (image and file hosting), JWT auth (jose) with bcrypt-hashed access code, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
   outcome: "A live portfolio that runs entirely off a private admin panel: site settings, home page sections and projects are all edited without touching code. Project pages can be laid out as tiles (case-study style, each with its own page) or as an image gallery with a lightbox. Deployed serverlessly on Vercel with a Neon Postgres database and Cloudinary-hosted media.",
   tags: ["Design", "Development", "Deployment"],
 },
-  {
-    id: "template", slug: "template",
-    name: "Template", category: "Personal Project", year: "2026",
-    desc: "A design template targeted towards service based businesses.",
-    image: `${BASE}/images/101.png`,
-    images: range(101, 115),
-    link: "https://template-iota-topaz.vercel.app/",
-    overview: "Multi-page website template built for service-based businesses.",
-    software: "TypeScript, Next.js (App Router), React, Resend (transactional email), Vercel (serverless deployment, CI/CD), GitHub (version control), HTML5, CSS3",
-    outcome: "A ready-to-deploy business website covering the  customer journey from browsing to enquiry. Visitors can browse services filtered by category, and submit a contact form that sends an email through Resend. All content (service titles, tags, gallery items, contact details) is structured to be swapped out with minimal effort, making it a practical starting point for any service based business.",
-    tags: ["Design", "Development", "Deployment"],
-  },
+
   {
     id: "template-store", slug: "template-store",
     name: "Template Store", category: "Personal Project", year: "2026",
@@ -97,6 +86,19 @@ const PROJECTS = [
     outcome: "A complete booking site for service businesses. Customers register, verify their email, choose one or more services to be booked back-to-back as a single appointment, choose from a monthly calendar showing live availability slots, and pay a deposit. Confirmation, cancellation and day-before reminder emails fire automatically. The admin panel includes: option to generate a default monthly schedule in one click, add or remove individual availability windows (overlapping windows merge automatically), book clients in manually with no deposit, and refund or cancel any booking.",
     tags: ["Design", "Development", "Deployment"],
   },
-];
 
+
+  {
+    id: "template", slug: "template",
+    name: "Template", category: "Personal Project", year: "2026",
+    desc: "A design template targeted towards service based businesses.",
+    image: `${BASE}/images/101.png`,
+    images: range(101, 115),
+    link: "https://template-iota-topaz.vercel.app/",
+    overview: "Multi-page website template built for service-based businesses.",
+    software: "TypeScript, Next.js (App Router), React, Resend (transactional email), Vercel (serverless deployment, CI/CD), GitHub (version control), HTML5, CSS3",
+    outcome: "A ready-to-deploy business website covering the  customer journey from browsing to enquiry. Visitors can browse services filtered by category, and submit a contact form that sends an email through Resend. All content (service titles, tags, gallery items, contact details) is structured to be swapped out with minimal effort, making it a practical starting point for any service based business.",
+    tags: ["Design", "Development", "Deployment"],
+  },
+  ];
 export default PROJECTS;
