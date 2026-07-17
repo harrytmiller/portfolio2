@@ -47,6 +47,19 @@ const PROJECTS = [
   outcome: "A ready-to-trade website for a real carpentry business. Visitors can browse twelve services, view individual service pages and a project gallery, and read full legal pages. The contact form lets customers send an enquiry with their details, a preferred consultation date, and project photos, which are automatically resized in the browser before sending to stay within serverless payload limits, then delivered by email through Resend. All company details, services and contact information are structured to be updated easily. Built around real company information including registered company details and insurance, and deployed live on Netlify.",
   tags: ["Design", "Development", "Deployment"],
 },
+
+{
+  id: "editportfolio", slug: "editportfolio",
+  name: "Editable Portfolio", category: "Personal Project", year: "2026",
+  desc: "A fully editable portfolio platform with a hidden admin panel.",
+  image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(700, 720)
+  images: [],                                 // TODO: range(START, END)
+  link: "",
+  overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel.",
+  software: "TypeScript, Next.js 14 (Pages Router), React, Node.js, PostgreSQL, Neon (serverless Postgres), Cloudinary (image and file hosting), JWT auth (jose) with bcrypt-hashed access code, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+  outcome: "A live portfolio that runs entirely off a private admin panel: site settings, home page sections and projects are all edited without touching code. Project pages can be laid out as tiles (case-study style, each with its own page) or as an image gallery with a lightbox. Deployed serverlessly on Vercel with a Neon Postgres database and Cloudinary-hosted media.",
+  tags: ["Design", "Development", "Deployment"],
+},
   {
     id: "template", slug: "template",
     name: "Template", category: "Business Project", year: "2026",
