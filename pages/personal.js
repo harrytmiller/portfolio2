@@ -14,9 +14,9 @@ export default function Personal() {
             <h1 className={s.catTitle}>Personal<br />Projects</h1>
           </div>
           <p className={s.catSub}>
-            Things I&rsquo;ve built outside of client work — usually to learn
-            something new, solve a problem for myself, or just because I
-            wanted to see if I could.
+            Work built outside of client projects — I view these projects as
+            excellent opportunities to learn new skills without the pressures
+            of client needs and deadlines.
           </p>
         </div>
 

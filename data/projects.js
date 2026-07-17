@@ -50,7 +50,7 @@ const PROJECTS = [
 
 {
   id: "editportfolio", slug: "editportfolio",
-  name: "Editable Portfolio", category: "Personal Project", year: "2026",
+  name: "Editable Portfolio", category: "Business Project", year: "2026",
   desc: "A fully editable portfolio platform with a hidden admin panel.",
   image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(700, 720)
   images: [],                                 // TODO: range(START, END)
@@ -62,7 +62,7 @@ const PROJECTS = [
 },
   {
     id: "template", slug: "template",
-    name: "Template", category: "Business Project", year: "2026",
+    name: "Template", category: "Personal Project", year: "2026",
     desc: "A design template targeted towards service based businesses.",
     image: `${BASE}/images/101.png`,
     images: range(101, 115),
@@ -74,7 +74,7 @@ const PROJECTS = [
   },
   {
     id: "template-store", slug: "template-store",
-    name: "Template Store", category: "Business Project", year: "2026",
+    name: "Template Store", category: "Personal Project", year: "2026",
     desc: "A fully functional e-commerce platform set up in test mode.",
     image: `${BASE}/images/001.png`,
     images: range(1, 35
@@ -87,7 +87,7 @@ const PROJECTS = [
   },
 {
     id: "template-bookings", slug: "template-bookings",
-    name: "Template Bookings", category: "Business Project", year: "2026",
+    name: "Template Bookings", category: "Personal Project", year: "2026",
     desc: "A full appointment booking platform with payment processing and admin panels set up in test mode.",
     image: `${BASE}/images/201.png`,
     images: range(201, 229),
