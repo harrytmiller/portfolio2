@@ -134,6 +134,38 @@ export default function Home() {
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Portfolio</span><div className={s.sectionLine} /></div>
           <div className={s.overviewGrid}>
             <div className={s.overviewCard}>
+              <Link href="/business" className={s.overviewCardHead}>
+                Business <span className={s.overviewArrow}>→</span>
+              </Link>
+              <div className={s.overviewSub}>Client work</div>
+              <div className={s.overviewYear}>Projects</div>
+              {PROJECTS.filter((p) => p.category === "Business Project").map((p) => (
+                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
+                  {p.name} <span className={s.overviewItemArrow}>→</span>
+                </Link>
+              ))}
+            </div>
+            <div className={s.overviewCard}>
+              <Link href="/masters" className={s.overviewCardHead}>
+                Masters <span className={s.overviewArrow}>→</span>
+              </Link>
+              <div className={s.overviewSub}>MSc Applied AI, Warwick — Sep 2026</div>
+              <div className={s.overviewYear}>Projects</div>
+              <div className={`${s.overviewItem} ${s.overviewItemDim}`}>Added as completed</div>
+            </div>
+            <div className={s.overviewCard}>
+              <Link href="/personal" className={s.overviewCardHead}>
+                Personal <span className={s.overviewArrow}>→</span>
+              </Link>
+              <div className={s.overviewSub}>Outside of client work</div>
+              <div className={s.overviewYear}>Projects</div>
+              {PROJECTS.filter((p) => p.category === "Personal Project").map((p) => (
+                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
+                  {p.name} <span className={s.overviewItemArrow}>→</span>
+                </Link>
+              ))}
+            </div>
+            <div className={s.overviewCard}>
               <a href={ARCHIVE_URL} target="_blank" rel="noopener noreferrer" className={s.overviewCardHead}>
                 Archive <span className={s.overviewArrow}>↗</span>
               </a>
@@ -155,38 +187,6 @@ export default function Home() {
               <a href="https://harrytmiller.github.io/portfolio/#/Project3" target="_blank" rel="noopener noreferrer" className={s.overviewItemLink}>API Intel <span className={s.overviewItemArrow}>↗</span></a>
               <a href="https://harrytmiller.github.io/portfolio/#/MessageApp" target="_blank" rel="noopener noreferrer" className={s.overviewItemLink}>Message App <span className={s.overviewItemArrow}>↗</span></a>
             </div>
-            <div className={s.overviewCard}>
-              <Link href="/business" className={s.overviewCardHead}>
-                Business <span className={s.overviewArrow}>→</span>
-              </Link>
-              <div className={s.overviewSub}>Professional work</div>
-              <div className={s.overviewYear}>Projects</div>
-              {PROJECTS.filter((p) => p.category === "Business Project").map((p) => (
-                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
-                  {p.name} <span className={s.overviewItemArrow}>→</span>
-                </Link>
-              ))}
-            </div>
-            <div className={s.overviewCard}>
-              <Link href="/personal" className={s.overviewCardHead}>
-                Personal <span className={s.overviewArrow}>→</span>
-              </Link>
-              <div className={s.overviewSub}>Outside of client work</div>
-              <div className={s.overviewYear}>Projects</div>
-              {PROJECTS.filter((p) => p.category === "Personal Project").map((p) => (
-                <Link key={p.id} href={`/projects/${p.slug}`} className={s.overviewItemLink}>
-                  {p.name} <span className={s.overviewItemArrow}>→</span>
-                </Link>
-              ))}
-            </div>
-            <div className={s.overviewCard}>
-              <Link href="/masters" className={s.overviewCardHead}>
-                Masters <span className={s.overviewArrow}>→</span>
-              </Link>
-              <div className={s.overviewSub}>MSc Applied AI, Warwick — Sep 2026</div>
-              <div className={s.overviewYear}>Projects</div>
-              <div className={`${s.overviewItem} ${s.overviewItemDim}`}>Added as completed</div>
-            </div>
           </div>
           <p style={{fontSize:"0.75rem",color:"var(--muted)",fontWeight:300,lineHeight:1.7,marginTop:"1.5rem",letterSpacing:"0.02em"}}>I built a new portfolio as my recent work was better than my portfolio. Switching from Flutter to Next.js helped me to grow as a developer, and with a Masters and a pipeline of projects ahead, now felt like the right time for a cleaner foundation. I still believe the projects in my archive hold value and demonstrate my journey.</p>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
         <div className={s.work}>
           <div className={s.sectionHeader}><span className={s.sectionLabel}>Selected Work</span><div className={s.sectionLine} /></div>
           <div className={s.grid}>
-            {PROJECTS.map((p) => (
+            {PROJECTS.filter((p) => p.id !== "template").slice(0, 6).map((p) => (
               <Link key={p.id} href={`/projects/${p.slug}`} className={s.card}>
                 <div className={s.cardThumb}>
                   {p.image ? <img src={p.image} alt={p.name} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /> : "Image Placeholder"}

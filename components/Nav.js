@@ -34,18 +34,23 @@ export default function Nav() {
 
         <ul className={s.links}>
           <li>
+            <Link href="/" className={`${s.link} ${pathname === "/" ? s.active : ""}`}>
+              Home
+            </Link>
+          </li>
+          <li>
             <Link href="/business" className={`${s.link} ${isBusiness ? s.active : ""}`}>
               Business
             </Link>
           </li>
           <li>
-            <Link href="/personal" className={`${s.link} ${isPersonal ? s.active : ""}`}>
-              Personal
+            <Link href="/masters" className={`${s.link} ${pathname === "/masters" ? s.active : ""}`}>
+              Masters
             </Link>
           </li>
           <li>
-            <Link href="/masters" className={`${s.link} ${pathname === "/masters" ? s.active : ""}`}>
-              Masters
+            <Link href="/personal" className={`${s.link} ${isPersonal ? s.active : ""}`}>
+              Personal
             </Link>
           </li>
           <li>
@@ -92,14 +97,17 @@ export default function Nav() {
 
       {open && (
         <div className={s.dropdown}>
+          <Link href="/" className={s.mobileItem} onClick={() => setOpen(false)}>
+            Home <span className={s.mobileArrow}>→</span>
+          </Link>
           <Link href="/business" className={s.mobileItem} onClick={() => setOpen(false)}>
             Business <span className={s.mobileArrow}>→</span>
           </Link>
-          <Link href="/personal" className={s.mobileItem} onClick={() => setOpen(false)}>
-            Personal <span className={s.mobileArrow}>→</span>
-          </Link>
           <Link href="/masters" className={s.mobileItem} onClick={() => setOpen(false)}>
             Masters <span className={s.mobileArrow}>→</span>
+          </Link>
+          <Link href="/personal" className={s.mobileItem} onClick={() => setOpen(false)}>
+            Personal <span className={s.mobileArrow}>→</span>
           </Link>
           <a
             href={ARCHIVE_URL}
