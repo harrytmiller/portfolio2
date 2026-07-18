@@ -76,7 +76,7 @@
 .tileRight { display: flex; align-items: center; gap: 1.5rem; }
 
 .tileImgWrap {
-  height: clamp(56px, 14vw, 115px);
+  height: clamp(67px, 16.8vw, 138px);
   aspect-ratio: 1919 / 910;
   border-radius: 4px;
   overflow: hidden;
@@ -120,7 +120,7 @@
   .tileMeta { order: 4; }
   .tileDesc { order: 5; max-width: none; }
   .tileTags { order: 6; }
-  .tileArrow { order: 7; justify-self: end; }
+  .tileArrow { display: none; }
 }
 
 /* ─── MASTERS COMING SOON ─── */
