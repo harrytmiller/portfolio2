@@ -61,7 +61,7 @@ const PROJECTS = [
   tags: ["Design", "Development", "Deployment"],
 },
 
-  {
+  { 
     id: "template-store", slug: "template-store",
     name: "Template Store", category: "Personal Project", year: "2026",
     desc: "A fully functional e-commerce platform set up in test mode.",
