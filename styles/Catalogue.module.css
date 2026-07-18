@@ -64,6 +64,29 @@
 
 .tileMeta { font-size: 0.78rem; color: var(--muted); font-weight: 300; }
 
+.tileDesc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.65;
+  margin-top: 0.6rem;
+  max-width: 560px;
+}
+
+.tileRight { display: flex; align-items: center; gap: 1.5rem; }
+
+.tileImgWrap {
+  height: clamp(56px, 14vw, 115px);
+  aspect-ratio: 1919 / 910;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.tileImg { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 .tileTags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.85rem; }
 
 .tileTag {
@@ -79,6 +102,26 @@
   color: var(--muted); transition: color 0.2s, transform 0.2s;
 }
 .tile:hover .tileArrow { color: var(--text); transform: translate(4px, -4px); }
+
+/* Mobile only: title above a large centered image, rest of the info below. Desktop keeps the image right-aligned. */
+@media (max-width: 640px) {
+  .tile { grid-template-columns: 1fr; align-items: start; gap: 0.5rem; }
+  .tileLeft { display: contents; }
+  .tileRight { display: contents; }
+  .tileNum { order: 1; }
+  .tileName { order: 2; }
+  .tileImgWrap {
+    order: 3;
+    width: 85%;
+    max-width: 380px;
+    height: auto;
+    margin: 0.5rem auto 0.25rem;
+  }
+  .tileMeta { order: 4; }
+  .tileDesc { order: 5; max-width: none; }
+  .tileTags { order: 6; }
+  .tileArrow { order: 7; justify-self: end; }
+}
 
 /* ─── MASTERS COMING SOON ─── */
 .soon {

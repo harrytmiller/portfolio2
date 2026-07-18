@@ -118,16 +118,6 @@
 .viewAllBtn { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.15s; border-bottom: 1px solid transparent; }
 .viewAllBtn:hover { color: var(--text); border-bottom-color: var(--border); }
 
-/* Mobile only: title sits in its own row above a full-width image, everything else follows below */
-@media (max-width: 640px) {
-  .cardBody { display: contents; }
-  .cardName { order: 1; padding: 1.1rem 1.25rem 0.75rem; }
-  .cardThumb { order: 2; border-bottom: none; }
-  .cardCat { order: 3; padding: 0.9rem 1.25rem 0; }
-  .cardDesc { order: 4; padding: 0 1.25rem 1rem; }
-  .cardFoot { order: 5; }
-}
-
 .overviewNote {
   font-size: 0.75rem; color: var(--muted); font-weight: 300;
   line-height: 1.65; margin-top: 0.75rem; letter-spacing: 0.02em;

@@ -23,18 +23,11 @@ export default function Personal() {
         <div className={s.tileList}>
           {PERSONAL_PROJECTS.map((p, i) => (
             <Link key={p.id} href={`/projects/${p.slug}`} className={s.tile}>
-              <div>
+              <div className={s.tileLeft}>
                 <div className={s.tileNum}>0{i + 1}</div>
                 <div className={s.tileName}>{p.name}</div>
                 <div className={s.tileMeta}>{p.year}</div>
-                <p style={{
-                  fontSize: "0.8rem",
-                  color: "var(--muted)",
-                  fontWeight: 300,
-                  lineHeight: 1.65,
-                  marginTop: "0.6rem",
-                  maxWidth: "560px",
-                }}>
+                <p className={s.tileDesc}>
                   {p.desc}
                 </p>
                 <div className={s.tileTags}>
@@ -43,28 +36,13 @@ export default function Personal() {
                   ))}
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+              <div className={s.tileRight}>
                 {p.image && (
-                  <div
-                    style={{
-                      height: "clamp(56px, 14vw, 115px)",
-                      aspectRatio: "1919 / 910",
-                      borderRadius: "4px",
-                      overflow: "hidden",
-                      border: "1px solid var(--border)",
-                      flexShrink: 0,
-                      background: "var(--surface)",
-                    }}
-                  >
+                  <div className={s.tileImgWrap}>
                     <img
                       src={p.image}
                       alt={p.name}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
+                      className={s.tileImg}
                     />
                   </div>
                 )}
