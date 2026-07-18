@@ -76,7 +76,7 @@
 .tileRight { display: flex; align-items: center; gap: 1.5rem; }
 
 .tileImgWrap {
-  height: clamp(67px, 16.8vw, 138px);
+  height: clamp(77px, 19.3vw, 159px);
   aspect-ratio: 1919 / 910;
   border-radius: 4px;
   overflow: hidden;
