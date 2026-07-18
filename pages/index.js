@@ -169,7 +169,7 @@ export default function Home() {
               <a href={ARCHIVE_URL} target="_blank" rel="noopener noreferrer" className={s.overviewCardHead}>
                 Archive <span className={s.overviewArrow}>↗</span>
               </a>
-              <div className={s.overviewSub}>University &amp; post-uni work</div>
+              <div className={s.overviewSub}>BSc and early works</div>
               <div className={s.overviewYear}>Year 2</div>
               <a href="https://harrytmiller.github.io/portfolio/#/Design" target="_blank" rel="noopener noreferrer" className={s.overviewItemLink}>3D Design &amp; Animation <span className={s.overviewItemArrow}>↗</span></a>
               <a href="https://harrytmiller.github.io/portfolio/#/Setup" target="_blank" rel="noopener noreferrer" className={s.overviewItemLink}>Software Engineering <span className={s.overviewItemArrow}>↗</span></a>
