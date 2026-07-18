@@ -53,7 +53,7 @@ const PROJECTS = [
   name: "Editable Portfolio", category: "Business Project", year: "2026",
   desc: "A fully editable portfolio platform with a hidden admin panel.",
   image: `${BASE}/images/617.png`,  
-  images: range(600, 631),
+  images: range(600, 633),
   link: "https://portfolio542.vercel.app",
   overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel.",
   software: "TypeScript, Next.js 14 (Pages Router), React, Node.js, PostgreSQL, Neon (serverless Postgres), Cloudinary (image and file hosting), JWT auth (jose) with bcrypt-hashed access code, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
