@@ -27,7 +27,7 @@ const PROJECTS = [
   id: "red", slug: "red",
   name: "Red", category: "Business Project", year: "2026",
   desc: "A live portfolio and shop for an artist selling original paintings and prints, with vast admin options so the site can grow with the business.",  image: `${BASE}/images/PLACEHOLDER.png`,   // TODO: replace with real screenshot range once images are taken, e.g. range(600, 640)
-  image: `${BASE}/images/758.png`,
+  image: `${BASE}/images/757.png`,
   images: range(700, 772),                              // TODO: range(START, END)
   link: "https://redartworks.co.uk/",
   overview: "Live portfolio and shop built to grow with the business, for an artist soon to start selling original paintings and prints. There are three site modes set in the admin panel: Portfolio (just a showcase, nothing for sale), Shop redirect (every shop link sends visitors to an external URL), and Full ecommerce (the complete in-site shop). Legal pages and shop-related features switch automatically with the chosen mode. There are multiple other features built to give the admin freedom in how they want to sell now and in the future.",
