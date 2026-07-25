@@ -8,3 +8,10 @@
   font-size: 0.72rem; color: var(--muted);
   transition: border-color 0.3s;
 }
+
+.footerLink {
+  font-size: 0.72rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.footerLink:hover { color: var(--text); }
