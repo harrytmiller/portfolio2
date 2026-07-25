@@ -86,23 +86,13 @@ export default function Terms() {
       <div>
         <h2 style={H2}>Contact</h2>
         <p style={P}>
-          Questions about these terms, or about anything shown on this site? I&rsquo;m based in London,
-          UK, and reachable by email at{" "}
+          Questions about these terms, or about anything shown on this site? Email me at{" "}
           <a
             href="mailto:harrytmiller42@gmail.com"
             style={{ color: "var(--text)", textDecoration: "underline" }}
           >
             harrytmiller42@gmail.com
-          </a>{" "}
-          or via GitHub:{" "}
-          <a
-            href="https://github.com/harrytmiller"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--text)", textDecoration: "underline" }}
-          >
-            github.com/harrytmiller
-          </a>. My CV, linked from the home page, has further contact details.
+          </a>.
         </p>
       </div>
     </div>
