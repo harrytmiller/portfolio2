@@ -37,6 +37,19 @@ const PROJECTS = [
 },
 
 {
+  id: "The Winning Post", slug: "WP",
+  name: "The Winning Post", category: "Business Project", year: "2026",
+  image: `${BASE}/images/801.png`,
+  images: range(801, 820),
+  tags: ["Design", "Development", "Deployment"],
+
+  desc: "",
+  overview: "",
+  software: "",
+  outcome: "",
+},
+
+{
   id: "kiwi-carpentry", slug: "kiwi-carpentry",
   name: "Quality Kiwi Carpentry", category: "Business Project", year: "2026",
   desc: "A live business website for a carpentry and construction company.",
