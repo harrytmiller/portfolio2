@@ -43,10 +43,10 @@ const PROJECTS = [
   images: range(801, 820),
   tags: ["Design", "Development", "Deployment"],
 
-  desc: "",
-  overview: "",
-  software: "",
-  outcome: "",
+desc: "A website for a Sutton pub, with an admin-managed events calendar.",   overview: "",
+  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres), Netlify (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+  overview: "A website for a Sutton pub, covering opening hours, facilities, history and an admin-managed events calendar. ",
+  outcome: "Multi-page informational pub website with a private admin panel for managing the events calendar and site-wide announcements without touching code. From the panel: add, edit or delete regular weekly events and one-off events, reset the calendar back to its default schedule, with expired events clearing themselves automatically, as well as set a site-wide banner message.",
 },
 
 {
