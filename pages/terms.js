@@ -69,6 +69,16 @@ export default function Terms() {
       </div>
 
       <div style={SECTION}>
+        <h2 style={H2}>Cookies</h2>
+        <p style={P}>
+          This site doesn&rsquo;t use cookies. The only thing saved on your device is your light/dark
+          theme preference, stored using your browser&rsquo;s local storage rather than a cookie. This is
+          used solely to remember your choice for your next visit and isn&rsquo;t shared with anyone or
+          used for tracking. You can clear it at any time by clearing your browser&rsquo;s site data.
+        </p>
+      </div>
+
+      <div style={SECTION}>
         <h2 style={H2}>Governing law</h2>
         <p style={P}>These terms are governed by the laws of England and Wales.</p>
       </div>
@@ -76,8 +86,16 @@ export default function Terms() {
       <div>
         <h2 style={H2}>Contact</h2>
         <p style={P}>
-          Questions about these terms, or about anything shown on this site? Reach out via the contact
-          details on the home page.
+          Questions about these terms, or about anything shown on this site? I&rsquo;m based in London,
+          UK, and reachable via GitHub:{" "}
+          <a
+            href="https://github.com/harrytmiller"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--text)", textDecoration: "underline" }}
+          >
+            github.com/harrytmiller
+          </a>. My CV, linked from the home page, has further contact details.
         </p>
       </div>
     </div>
