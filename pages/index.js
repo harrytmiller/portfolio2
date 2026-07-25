@@ -48,6 +48,10 @@ export default function Home() {
                 <span className={s.detailLabel}>GitHub</span>
                 <a href="https://github.com/harrytmiller" target="_blank" rel="noopener noreferrer" className={s.detailLink}>harrytmiller</a>
               </div>
+              <div className={s.detail}>
+                <span className={s.detailLabel}>Email</span>
+                <a href="mailto:harrytmiller42@gmail.com" className={s.detailLink}>harrytmiller42@gmail.com</a>
+              </div>
             </div>
             <a href="/portfolio2/CV.pdf" target="_blank" rel="noopener noreferrer" className={s.cvBtn}>
               View CV

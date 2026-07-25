@@ -87,7 +87,14 @@ export default function Terms() {
         <h2 style={H2}>Contact</h2>
         <p style={P}>
           Questions about these terms, or about anything shown on this site? I&rsquo;m based in London,
-          UK, and reachable via GitHub:{" "}
+          UK, and reachable by email at{" "}
+          <a
+            href="mailto:harrytmiller42@gmail.com"
+            style={{ color: "var(--text)", textDecoration: "underline" }}
+          >
+            harrytmiller42@gmail.com
+          </a>{" "}
+          or via GitHub:{" "}
           <a
             href="https://github.com/harrytmiller"
             target="_blank"

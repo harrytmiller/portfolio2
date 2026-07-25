@@ -9,6 +9,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <footer className={s.footer}>
         <span>© 2026 Harry Miller</span>
+        <a href="mailto:harrytmiller42@gmail.com" className={s.footerLink}>harrytmiller42@gmail.com</a>
         <Link href="/terms" className={s.footerLink}>Terms</Link>
         <span>London, UK</span>
       </footer>
