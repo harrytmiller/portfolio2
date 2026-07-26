@@ -65,11 +65,11 @@ desc: "A website for a Sutton pub, with an admin-managed events calendar.",   ov
 {
   id: "editportfolio", slug: "editportfolio",
   name: "Editable Portfolio", category: "Business Project", year: "2026",
-  desc: "A fully editable portfolio platform with a hidden admin panel.",
+  desc: "A fully editable portfolio platform with a hidden admin panel. Currently in use by a client.",
   image: `${BASE}/images/617.png`,  
   images: range(600, 633),
   link: "https://portfolio542.vercel.app",
-  overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel.",
+  overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel. Currently in use by a client.",
   software: "TypeScript, Next.js 14 (Pages Router), React, Node.js, PostgreSQL, Neon (serverless Postgres), Cloudinary (image and file hosting), JWT auth (jose) with bcrypt-hashed access code, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
   outcome: "A live portfolio that runs entirely off a private admin panel: site settings, home page sections and projects are all edited without touching code. Project pages can be laid out as tiles (case-study style, each with its own page) or as an image gallery with a lightbox. Deployed serverlessly on Vercel with a Neon Postgres database and Cloudinary-hosted media.",
   tags: ["Design", "Development", "Deployment"],
