@@ -22,6 +22,20 @@ const PROJECTS = [
   tags: ["Design", "Development", "Deployment"],
 },
 
+{
+  id: "tgw", slug: "Tailblazing Dog Walking",
+  name: "Tailblazing Dog Walking", category: "Business Project", year: "2026",
+  image: `${BASE}/images/901.png`,
+  images: range(901, 960),
+  tags: ["Design", "Development", "Deployment"],
+  link: "",
+
+  desc: "A live booking website for dog walking, day care and boarding, where three services and a one-person collection round all compete for the same hours and none of them can be allowed to collide.",
+  overview: "By far the most complicated booking system I've built. Where a normal booking site checks whether a slot is free, this one has to resolve three services that coincide with each other, all provided by one person. Group and solo walks run at set published times; day care runs between an opening and closing time chosen per day; boarding runs across nights, with handover hours set per calendar day. Either leg of a booking can be driven by the admin or handled by the dog owner, so every booking also places up to two collection or drop-off jobs into the day. A collection must sit inside a published collection window. Each of those services reserves real time. A day care drop-off can't be booked over a walk, a walk can't be published over a booked collection, and two handovers can't be at the door at once. Capacity is layered on top and kept separate: a group walk caps at four dogs, the house caps at three at any moment across day care and boarding, and walk dogs never count against the house limit. Booking is race-safe. Every path runs inside a single database transaction that locks every day the booking touches, so two people booking at the same moment are handled one at a time. Overlapping handovers are refused by the database itself, so the same time can never be claimed twice even under true concurrent load. The whole engine is covered by an automated suite of over 200 assertions, including concurrency tests run against a real PostgreSQL instance with genuinely parallel transactions.",
+  software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres, connection pooling), PostgreSQL advisory locks and GiST exclusion constraints (concurrency safety), Stripe (Checkout, webhooks, refunds), JWT auth (jose) with bcryptjs password hashing and OTP email verification, Brevo (transactional email, domain-verified sending), Cloudinary (image hosting), postcodes.io (UK postcode geocoding and distance calculation), Netlify (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), GitHub Actions (scheduled cron for reminder emails and data-retention sweep), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+  outcome: "",
+},
+
 
 {
   id: "red", slug: "red",
