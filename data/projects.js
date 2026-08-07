@@ -11,7 +11,7 @@ const PROJECTS = [
 {
   id: "tgw", slug: "Tailblazing Dog Walking",
   name: "Tailblazing Dog Walking", category: "Business Project", year: "2026",
-  image: `${BASE}/images/901.png`,
+  image: `${BASE}/images/903.png`,
   images: range(903, 959),
   tags: ["Design", "Development", "Deployment"],
   link: "",
