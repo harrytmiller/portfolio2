@@ -5,8 +5,6 @@ import { useTheme } from "../context/ThemeContext";
 import PROJECTS from "../data/projects";
 import s from "../styles/Nav.module.css";
 
-const ARCHIVE_URL = "https://harrytmiller.github.io/portfolio/";
-
 export default function Nav() {
   const { dark, toggle } = useTheme();
   const router = useRouter();
@@ -52,11 +50,6 @@ export default function Nav() {
             <Link href="/personal" className={`${s.link} ${isPersonal ? s.active : ""}`}>
               Personal
             </Link>
-          </li>
-          <li>
-            <a href={ARCHIVE_URL} target="_blank" rel="noopener noreferrer" className={`${s.link} ${s.extLink}`}>
-              Archive <span className={s.extArrow}>↗</span>
-            </a>
           </li>
         </ul>
 
@@ -109,15 +102,6 @@ export default function Nav() {
           <Link href="/personal" className={s.mobileItem} onClick={() => setOpen(false)}>
             Personal <span className={s.mobileArrow}>→</span>
           </Link>
-          <a
-            href={ARCHIVE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={s.mobileItem}
-            onClick={() => setOpen(false)}
-          >
-            Archive <span className={s.mobileArrow}>↗</span>
-          </a>
         </div>
       )}
     </>
