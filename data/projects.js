@@ -37,14 +37,16 @@ outcome:"Customers pick a service, enter each dog's details, choose a day from a
 {
   id: "X1N0", slug: "X1N0",
   name: "XINO MACHINE Shop", category: "Business Project", year: "2026",
-  desc:"",
   image: `${BASE}/images/1002.png`,
-  images: range(1000, 1061),                              // TODO: range(START, END)
+  images: range(1000, 1060),    
+    tags: ["Design", "Development", "Deployment"],
+                          // TODO: range(START, END)
   link: "1005",
   overview: "",
   software: "",
   outcome: "",
-  tags: ["Design", "Development", "Deployment"],
+    desc:"",
+
 },
 
 {
@@ -86,9 +88,10 @@ desc: "A website for a Sutton pub, with an admin-managed events calendar.",   ov
   tags: ["Design", "Development", "Deployment"],
 },
 
-{
+
+  {
   id: "editportfolio", slug: "editportfolio",
-  name: "Editable Portfolio", category: "Business Project", year: "2026",
+  name: "Editable Portfolio", category: "Personal Project", year: "2026",
   desc: "A fully editable portfolio platform with a hidden admin panel. Currently in use by a client.",
   image: `${BASE}/images/617.png`,  
   images: range(600, 633),
@@ -138,5 +141,10 @@ desc: "A website for a Sutton pub, with an admin-managed events calendar.",   ov
     outcome: "A ready-to-deploy business website covering the  customer journey from browsing to enquiry. Visitors can browse services filtered by category, and submit a contact form that sends an email through Resend. All content (service titles, tags, gallery items, contact details) is structured to be swapped out with minimal effort, making it a practical starting point for any service based business.",
     tags: ["Design", "Development", "Deployment"],
   },
+
+
+
+
   ];
+
 export default PROJECTS;
