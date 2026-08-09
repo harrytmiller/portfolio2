@@ -34,7 +34,18 @@ outcome:"Customers pick a service, enter each dog's details, choose a day from a
 },
 
 
-
+{
+  id: "X1N0", slug: "X1N0",
+  name: "X1N0M4CH1N3 E-Commerce Store", category: "Business Project", year: "2026",
+  desc:"",
+  image: `${BASE}/images/1005.png`,
+  images: range(1000, 1061),                              // TODO: range(START, END)
+  link: "1005",
+  overview: "",
+  software: "",
+  outcome: "",
+  tags: ["Design", "Development", "Deployment"],
+},
 
 {
   id: "red", slug: "red",
@@ -54,7 +65,7 @@ outcome:"Customers pick a service, enter each dog's details, choose a day from a
   name: "The Winning Post", category: "Business Project", year: "2026",
   image: `${BASE}/images/801.png`,
   images: range(801, 820),
-  tags: ["Design", "Development", "Deployment"],
+  tags: ["Design", "Development"],
 
 desc: "A website for a Sutton pub, with an admin-managed events calendar.",   overview: "",
   software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres), Netlify (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
