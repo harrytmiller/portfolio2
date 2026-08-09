@@ -39,13 +39,14 @@ outcome:"Customers pick a service, enter each dog's details, choose a day from a
   name: "XINO MACHINE Shop", category: "Business Project", year: "2026",
   image: `${BASE}/images/1002.png`,
   images: range(1000, 1060),    
-    tags: ["Design", "Development", "Deployment"],
-                          // TODO: range(START, END)
-  link: "1005",
-  overview: "",
-  software: "",
-  outcome: "",
-    desc:"",
+    tags: ["Design", "Development",],
+           software: "TypeScript, Next.js 16 (App Router, Server Components), React 19, Node.js, PostgreSQL, Neon (serverless Postgres, connection pooling), PostgreSQL stored procedures and row-level locking (concurrency safety), Stripe (Payment Intents, webhooks, refunds), custom JWT auth (jose) with bcryptjs and OTP email verification, Brevo (transactional email), Cloudinary (image hosting), Netlify (serverless deployment, CI/CD), Netlify Scheduled Functions (cron for stock release and daily data-retention sweep), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+                 // TODO: range(START, END)
+  link: "",
+
+  overview: "Shop and archive site for an artist selling prints and original work, with an admin panel covering products, stock, orders and site content. Checkout locks stock at the database level so one-off pieces can't oversell.",
+  outcome: "Customers browse prints and originals, pick a size and pay through Stripe. Stock is locked at the database level when checkout starts and released after 20 minutes if payment doesn't complete. Users verify with an OTP at registration and at checkout if using an email they're not signed in with. Emails fire automatically on every order processing event. The admin panel covers: products, per-size stock, pricing, shipping options with rates, gallery, orders, newsletter broadcasts, legal pages, business details, toggle shop off, toggle registration off and toggle contact form off. Orders can be marked shipped or cancelled, with the Stripe refund issued and stock returned in one action. Data retention runs on a schedule: orders anonymised after 6 years, dormant accounts warned then deleted, abandoned sign-ups cleared after 48 hours. Built with GDPR-compliant data handling, a full privacy notice, self-serve password reset, consent capture and account deletion. Deployed serverlessly on Netlify with a Neon Postgres database.",
+    desc:"A live shop and archive for an artist selling prints and original work, with an admin panel for products, stock and site content.",
 
 },
 
