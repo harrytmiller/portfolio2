@@ -36,7 +36,7 @@ outcome:"Customers pick a service, enter each dog's details, choose a day from a
 
 {
   id: "X1N0", slug: "X1N0",
-  name: "X1N0M4CH1N3 E-Commerce Store", category: "Business Project", year: "2026",
+  name: "XINO MACHINE E-Commerce Store", category: "Business Project", year: "2026",
   desc:"",
   image: `${BASE}/images/1005.png`,
   images: range(1000, 1061),                              // TODO: range(START, END)
