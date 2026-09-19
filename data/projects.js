@@ -89,19 +89,35 @@ desc: "A website for a Sutton pub, with an admin-managed events calendar.",   ov
   tags: ["Design", "Development", "Deployment"],
 },
 
+{
+  id: "Legible", slug: "Legible",
+  name: "Legible", category: "Personal Project", year: "2026",
+    link: "https://legible-taupe.vercel.app/",
+  tags: ["Design", "Development", "Deployment"],
 
+  desc: "A chat interface that reformats AI answers for dyslexic and ADHD readers, with every reading control applied live to answers already on screen.",
+
+  software: "JavaScript, React 18 (UMD, in-browser Babel compilation), Node.js (Vercel Functions), provider-agnostic OpenAI-compatible LLM layer (Google Gemini, Cerebras, OpenRouter, Mistral, Groq), server-sent event streaming relayed as newline-delimited JSON, self-healing model resolution with automatic retry against the provider's live model list, Web Speech API (speech synthesis with word-boundary tracking), localStorage (per-device settings persistence), CSS custom properties (runtime theming and typography), Google Fonts (Atkinson Hyperlegible, Lexend, Andika), Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
+  
+  overview: "A chat interface for people with dyslexia and ADHD. Where a normal AI chat hands back a wall of text and leaves you to cope with it, this one asks the model to mark up its answer first, then rebuilds that answer however the reader needs to see it. Changing a setting reshapes the answers already on screen instead of asking the model again, so the same answer can be read spaced out, in bionic, marked in red or left plain, without waiting on a new prompt. Free-tier models mark up long answers badly and tail off after a paragraph or two, so an under-marked reply gets caught and the marking filled in before it reaches the page.",
+  outcome: "Answers are requested in one of four shapes: short, short with a separate document, short with the long version inline, or long only. Each answer returns a one-line summary, a short answer, marked key terms, an action checklist and plain-word definitions of any jargon used. Sections are labelled and carry individual reading times. Under-marked replies are detected and the marking completed before rendering. Reading controls cover font, text size, line height, letter spacing, word spacing, line width, page tint, first-letter bolding, optional bionic reading, a reading ruler that dims all but one band, and a focus mode that dims previous prompts and responses. All apply to answers already on screen with nothing re-sent to the model. Four presets, Dyslexia, ADHD, Both and Plain, set all twenty-two controls at once, with a panel listing what the active preset applies and flagging any manual change. Settings persist per device. Text to speech reads any answer at a chosen voice and speed with the spoken word highlighted, either in full or the one-liner only, with optional autoplay. Per-answer actions: simplify, extract actions, copy, and save as a web page carrying the current typography, with documents also saving as Markdown. The newest answer can be regenerated at three thinking depths with attempts retained and accessible, each tagged with the depth and shape that produced it. Answers stream as they are written. The API key is held server-side. Access is gated by a server-validated code with per-IP throttling and same-origin enforcement. Retired model IDs are detected, looked up against the provider's current list and retried automatically. Deployed serverlessly on Vercel.",
+    image: `${BASE}/images/617.png`,  
+  images: range(600, 633),
+},
   {
   id: "editportfolio", slug: "editportfolio",
   name: "Editable Portfolio", category: "Personal Project", year: "2026",
   desc: "A fully editable portfolio platform with a hidden admin panel. Currently in use by a client.",
   image: `${BASE}/images/617.png`,  
   images: range(600, 633),
-  link: "https://portfolio542.vercel.app",
+  link: "",
   overview: "A fully editable portfolio platform with a hidden admin panel. Every section, page and project is managed through the panel. Currently in use by a client.",
   software: "TypeScript, Next.js 14 (Pages Router), React, Node.js, PostgreSQL, Neon (serverless Postgres), Cloudinary (image and file hosting), JWT auth (jose) with bcrypt-hashed access code, Vercel (serverless deployment, CI/CD), GitHub (version control, automatic deploys on push), HTML5, CSS3, HTTPS/TLS, environment-based secret management",
   outcome: "A live portfolio that runs entirely off a private admin panel: site settings, home page sections and projects are all edited without touching code. Project pages can be laid out as tiles (case-study style, each with its own page) or as an image gallery with a lightbox. Deployed serverlessly on Vercel with a Neon Postgres database and Cloudinary-hosted media.",
   tags: ["Design", "Development", "Deployment"],
 },
+
+
 
   { 
     id: "template-store", slug: "template-store",
